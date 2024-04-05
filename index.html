@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testando ARIA</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .pts::after {
+            content: "pontos";
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Bem Vindo</h1>
-        <p id="ptsDescription">pontos</p>
-        <p>Você tem 1000 <span aria-describedby="ptsDescription">pts</span> que irão expirar</p>
+        <p>Você tem 1000 <span class="visually-hidden">pontos</span><span class="pts">PTS</span> que irão expirar</p>
         <div class="buttons">
             <button>Acessar</button>
         </div>
