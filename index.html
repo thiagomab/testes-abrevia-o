@@ -15,16 +15,12 @@
             clip: rect(0, 0, 0, 0);
             border: 0;
         }
-
-        .pts::after {
-            content: "pontos";
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Bem Vindo</h1>
-        <p>Você tem 1000 <span class="visually-hidden">pontos</span><span class="pts">PTS</span> que irão expirar</p>
+        <p>Você tem 1000 <span class="visually-hidden">pontos</span><span aria-hidden="true">PTS</span> que irão expirar</p>
         <div class="buttons">
             <button>Acessar</button>
         </div>
